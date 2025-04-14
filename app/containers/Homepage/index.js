@@ -13,9 +13,16 @@ import actions from '../../actions';
 import banners from './banners.json';
 import CarouselSlider from '../../components/Common/CarouselSlider';
 import { responsiveOneItemCarousel } from '../../components/Common/CarouselSlider/utils';
+import BrandList from '../../components/Store/BrandList';
+import FeaturedProductList from '../../components/Store/FeaturedProductList';
 
 class Homepage extends React.PureComponent {
+  componentDidMount() {
+    this.props.fetchStoreBrands();
+    this.props.filterProducts();
+  }
   render() {
+    const { brands, products } = this.props;
     return (
       <div className='homepage'>
         <Row className='flex-row'>
@@ -48,13 +55,24 @@ class Homepage extends React.PureComponent {
             </div>
           </Col>
         </Row>
+        <div className='mt-5'>
+          <BrandList brands={brands} />
+        </div>
+
+        <div className='mt-5'>
+          <FeaturedProductList products={products} />
+        </div>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    brands: state.brand.storeBrands,
+    loading: state.brand.loading,
+    products: state.product.storeProducts,
+  };
 };
 
 export default connect(mapStateToProps, actions)(Homepage);

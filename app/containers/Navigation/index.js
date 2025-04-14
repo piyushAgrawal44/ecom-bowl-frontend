@@ -138,7 +138,7 @@ class Navigation extends React.PureComponent {
     return (
       <header className='header fixed-mobile-header'>
         <div className='header-info'>
-          <Container>
+          <Container >
             <Row>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-truck' />
@@ -146,7 +146,7 @@ class Navigation extends React.PureComponent {
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-credit-card' />
-                <span>Payment Methods</span>
+                <span>Online & COD Method</span>
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-phone' />
@@ -180,7 +180,7 @@ class Navigation extends React.PureComponent {
                   />
                 )}
                 <Link to='/'>
-                  <h1 className='logo'>MERN Store</h1>
+                  <h1 className='logo'>Ecom Bowl </h1>
                 </Link>
               </div>
             </Col>

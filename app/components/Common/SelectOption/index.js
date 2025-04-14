@@ -34,6 +34,7 @@ const SelectOption = props => {
       {label && <label>{label}</label>}
       <Select
         isDisabled={disabled}
+        isClearable={true}
         className='select-container'
         classNamePrefix='react-select'
         components={animatedComponents}
