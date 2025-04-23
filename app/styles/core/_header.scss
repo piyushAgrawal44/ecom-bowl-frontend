@@ -13,8 +13,8 @@
 }
 
 .header {
-  background-color: $white;
-  border-bottom: $border-primary;
+  background-color: $primary-color;
+  // border-bottom: $border-primary;
 
   .logo {
     font-size: $font-size-heading-large !important;
@@ -73,7 +73,7 @@
   }
 
   .navbar {
-    background-color: $white !important;
+    
     justify-content: flex-end;
     padding: 0;
 
@@ -131,6 +131,9 @@
       @include media-breakpoint-down(sm) {
         margin-right: 15px;
       }
+      a{
+        color: $white !important;
+      }
     }
   }
 
@@ -145,7 +148,7 @@
 
     .logo {
       margin: 0px;
-      color: $font-custom-color !important;
+      color: $white !important;
       @include media-breakpoint-up(md) {
         margin-left: 15px;
       }
@@ -211,7 +214,7 @@
 
       .brand-link {
         position: relative;
-        color: $font-custom-color !important;
+        color: $white !important;
         font-size: $font-size-large;
         font-weight: $font-weight-normal;
 

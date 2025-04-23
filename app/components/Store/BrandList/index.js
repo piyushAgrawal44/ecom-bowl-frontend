@@ -23,7 +23,7 @@ const BrandList = props => {
               to={`/shop/brand/${brand.slug}`}
               className='d-block brand-box'
             >
-              <h5>{brand.name}</h5>
+              <h5 className='brand-name'>{brand.name}</h5>
               <p className='brand-desc'>{brand.description}</p>
             </Link>
           </Col>

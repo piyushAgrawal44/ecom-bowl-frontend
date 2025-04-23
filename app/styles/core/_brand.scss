@@ -4,6 +4,7 @@
       height: 100%;
       border-radius: $border-radius-default;
       box-shadow: $box-shadow-secondary;
+
       @include transition();
 
       &:hover {
@@ -22,9 +23,15 @@
   .brand-box {
     height: 100%;
     padding: 10px;
-    border: $border-default;
+    border: $border-blue;
     border-radius: $border-radius-default;
     @include transition();
+
+    .brand-name {
+      color: $primary-color !important;
+      text-decoration: underline;
+      font-weight: 700;
+    }
 
     .brand-link {
       display: block;

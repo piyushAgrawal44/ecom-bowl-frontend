@@ -228,7 +228,7 @@ class Navigation extends React.PureComponent {
               lg={{ size: 4, order: 3 }}
               // className='px-0'
             >
-              <Navbar color='light' light expand='md' className='mt-1 mt-md-0'>
+              <Navbar expand='md' className='mt-1 mt-md-0'>
                 <CartIcon
                   className='d-none d-md-block'
                   cartItems={cartItems}
