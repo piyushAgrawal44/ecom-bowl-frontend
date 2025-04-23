@@ -76,6 +76,14 @@ const FeaturedProductList = props => {
                     </div>
                 ))}
             </div>
+            {
+                products.length === 0 && (
+                    <div className='text-center'>
+                        <h4 className='text-muted'>No featured products available</h4>
+                    </div>
+                )}
+
+
         </div>
     );
 };

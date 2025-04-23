@@ -28,6 +28,13 @@ const BrandList = props => {
             </Link>
           </Col>
         ))}
+        {
+          brands.length === 0 && (
+            <Col xs='12' className='text-center'>
+              <p>No brands available</p>
+            </Col>
+          )
+        }
       </Row>
     </div>
   );
