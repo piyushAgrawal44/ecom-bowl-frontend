@@ -22,7 +22,7 @@ class Homepage extends React.PureComponent {
     this.props.filterProducts();
   }
   render() {
-    const { brands, products } = this.props;
+    const { brands, products, isLoading } = this.props;
     return (
       <div className='homepage'>
         <Row className='flex-row'>
@@ -56,7 +56,7 @@ class Homepage extends React.PureComponent {
           </Col>
         </Row>
         <div className='mt-5'>
-          <BrandList brands={brands} />
+          <BrandList brands={brands} isLoading={isLoading} />
         </div>
 
         <div className='mt-5'>
@@ -70,7 +70,7 @@ class Homepage extends React.PureComponent {
 const mapStateToProps = state => {
   return {
     brands: state.brand.storeBrands,
-    loading: state.brand.loading,
+    isLoading: state.brand.isLoading,
     products: state.product.storeProducts,
   };
 };

@@ -52,6 +52,7 @@ export const brandEditChange = (name, value) => {
 export const fetchStoreBrands = () => {
   return async (dispatch, getState) => {
     try {
+      dispatch({ type: SET_BRANDS_LOADING, payload: true });
       const response = await axios.get(`${API_URL}/brand/list`);
 
       dispatch({
@@ -60,6 +61,8 @@ export const fetchStoreBrands = () => {
       });
     } catch (error) {
       handleError(error, dispatch);
+    } finally {
+      dispatch({ type: SET_BRANDS_LOADING, payload: false });
     }
   };
 };
